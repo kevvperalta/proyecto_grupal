@@ -14,7 +14,10 @@ Para el desarrollo integral de esta aplicación web Full-Stack, se emplearon los
 * **Python**: Lenguaje principal del backend, utilizando el framework **Flask** para la gestión de rutas, controladores de negocio y renderizado de plantillas.
 * **SQL**: Gestión y persistencia de datos mediante el motor relacional **SQLite**, optimizando la velocidad de respuesta en las consultas de inventario y usuarios.
 * **JWT (JSON Web Tokens)**: Sistema de seguridad avanzado para el manejo de sesiones protegidas y autenticación robusta de los lectores registrados.
-* 
 
+## Calficación del equipo
+*Kevin Peralta LLasa: 20
+*Angel Gabriel Hancco Flores: 20
+*Matias Hernan Chamana Gonzales: 20
 ---
 © 2025 Biblioteca Digital Lectura Viva - Fomentando la cultura a través de la tecnología.
