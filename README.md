@@ -16,8 +16,8 @@ Para el desarrollo integral de esta aplicación web Full-Stack, se emplearon los
 * **JWT (JSON Web Tokens)**: Sistema de seguridad avanzado para el manejo de sesiones protegidas y autenticación robusta de los lectores registrados.
 
 ## Calficación del equipo
-*Kevin Peralta LLasa: 20
-*Angel Gabriel Hancco Flores: 20
-*Matias Hernan Chamana Gonzales: 20
+* Kevin Peralta LLasa: 20
+* Angel Gabriel Hancco Flores: 20
+* Matias Hernan Chamana Gonzales: 20
 ---
 © 2025 Biblioteca Digital Lectura Viva - Fomentando la cultura a través de la tecnología.
