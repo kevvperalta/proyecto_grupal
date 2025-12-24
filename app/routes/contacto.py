@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from ..utils import db
+from ..utils.db import get_db_connection  # ✅ Conexión directa
 from datetime import datetime
 
 contacto_bp = Blueprint('contacto', __name__)
@@ -12,20 +12,29 @@ def enviar_mensaje():
     if not all(k in data for k in required):
         return jsonify({"error": "Faltan campos requeridos"}), 400
 
-    nuevo_contacto = Contacto(
-        nombre=data['nombre'],
-        correo=data['correo'],
-        mensaje=data['mensaje'],
-        fecha_envio=datetime.utcnow(),
-        leido=False
-    )
-
+    conn = get_db_connection()
+    if not conn:
+        return jsonify({"error": "Error de conexión a la BD"}), 500
+    
+    cursor = conn.cursor()
+    
     try:
-        db.session.add(nuevo_contacto)
-        db.session.commit()
+        cursor.execute("""
+            INSERT INTO Contactos (nombre, correo, mensaje, fecha_envio, leido)
+            VALUES (%s, %s, %s, %s, %s)
+        """, (
+            data['nombre'],
+            data['correo'],
+            data['mensaje'],
+            datetime.utcnow(),
+            False
+        ))
         
+        conn.commit()
+        conn.close()
         return jsonify({"mensaje": "Mensaje enviado correctamente. ¡Gracias por contactarnos!"}), 201
     
     except Exception as e:
-        db.session.rollback()
+        conn.rollback()
+        conn.close()
         return jsonify({"error": "Error al guardar el mensaje"}), 500
