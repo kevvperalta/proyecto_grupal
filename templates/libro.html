@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Libro | Biblioteca Digital Lectura Viva</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="topbar">
+      <h1>Biblioteca Digital Lectura Viva</h1>
+      <a href="/login" class="btn-login">Iniciar Sesión</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/catalogo">Catálogo</a></li>
+        <li><a href="/busqueda">Búsqueda Avanzada</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="detalle-libro">
+
+    <!-- LIBRO 1 -->
+    <section id="libro1" class="libro">
+      <div class="contenido-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeD40YKDr0JEKMyMhxoftS3gbXaAtszj_O5A&s" alt="La ciudad y los perros">
+        <div class="info-libro">
+          <h2>La ciudad y los perros</h2>
+          <p class="autor">Mario Vargas Llosa</p>
+          <p class="descripcion">
+            Ambientada en el Colegio Militar Leoncio Prado, esta novela muestra la violencia, la hipocresía y la lucha por la identidad en un entorno represivo. Ganó el Premio Biblioteca Breve en 1962.
+          </p>
+          <p class="precio-detalle">S/ 35.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 2 -->
+    <section id="libro2" class="libro">
+      <div class="contenido-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqZq1KlL2AYXFTfMcLnfKD_ro1sOzw3Wp6eA&s" alt="Los ríos profundos">
+        <div class="info-libro">
+          <h2>Los ríos profundos</h2>
+          <p class="autor">José María Arguedas</p>
+          <p class="descripcion">
+            Narra la vida de Ernesto, un adolescente que enfrenta el choque entre la cultura andina y la occidental, mostrando la riqueza y el dolor del mundo indígena peruano.
+          </p>
+          <p class="precio-detalle">S/ 30.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 3 -->
+    <section id="libro3" class="libro">
+      <div class="contenido-libro">
+        <img src="https://www.cervantesvirtual.com/images/portales/manuel_scorza/portadas/redoble_por_rancas_1983_s.jpg" alt="Redoble por Rancas">
+        <div class="info-libro">
+          <h2>Redoble por Rancas</h2>
+          <p class="autor">Manuel Scorza</p>
+          <p class="descripcion">
+            Primera entrega de la saga "La guerra silenciosa", es una denuncia poética contra los abusos hacia los campesinos andinos. Su estilo mezcla realismo y simbolismo.
+          </p>
+          <p class="precio-detalle">S/ 28.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 4 -->
+    <section id="libro4" class="libro">
+      <div class="contenido-libro">
+        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482834617i/33615123.jpg" alt="El zorro de arriba y el zorro de abajo">
+        <div class="info-libro">
+          <h2>El zorro de arriba y el zorro de abajo</h2>
+          <p class="autor">José María Arguedas</p>
+          <p class="descripcion">
+            Última obra del autor, que combina mito, diario personal y novela social para representar el caos moral y cultural de la modernización peruana.
+          </p>
+          <p class="precio-detalle">S/ 40.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 5 -->
+    <section id="libro5" class="libro">
+      <div class="contenido-libro">
+        <img src="https://www.penguinlibros.com/pe/2371523-large_default/la-tia-julia-y-el-escribidor.webp" alt="La tía Julia y el escribidor">
+        <div class="info-libro">
+          <h2>La tía Julia y el escribidor</h2>
+          <p class="autor">Mario Vargas Llosa</p>
+          <p class="descripcion">
+            Una divertida historia que mezcla el amor, la juventud y la literatura, inspirada en la vida del autor y ambientada en la Lima de los años 50.
+          </p>
+          <p class="precio-detalle">S/ 38.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 6 -->
+    <section id="libro6" class="libro">
+      <div class="contenido-libro">
+        <img src="https://www.bnp.gob.pe/wp-content/uploads/2019/10/HERALDOS-NEGROS.jpg" alt="Los heraldos negros">
+        <div class="info-libro">
+          <h2>Los heraldos negros</h2>
+          <p class="autor">César Vallejo</p>
+          <p class="descripcion">
+            Primer poemario de Vallejo, publicado en 1919, que refleja la angustia existencial y la injusticia social con un lenguaje profundamente humano y simbólico.
+          </p>
+          <p class="precio-detalle">S/ 25.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 7 -->
+    <section id="libro7" class="libro">
+      <div class="contenido-libro">
+        <img src="https://fundacionbbva.pe/wp-content/uploads/2018/06/000044.jpg" alt="Trilce">
+        <div class="info-libro">
+          <h2>Trilce</h2>
+          <p class="autor">César Vallejo</p>
+          <p class="descripcion">
+            Obra revolucionaria del modernismo peruano, rompe las estructuras del lenguaje para expresar la soledad y el dolor humano de forma única.
+          </p>
+          <p class="precio-detalle">S/ 22.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 8 -->
+    <section id="libro8" class="libro">
+      <div class="contenido-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnr-seBNcCtCcOKyPCoAWy6RNU0-sf1k6zSQ&s" alt="El pez de oro">
+        <div class="info-libro">
+          <h2>El pez de oro</h2>
+          <p class="autor">José María Arguedas</p>
+          <p class="descripcion">
+            Una colección de relatos místicos y poéticos que conectan la cosmovisión andina con lo espiritual y lo cotidiano.
+          </p>
+          <p class="precio-detalle">S/ 33.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 9 -->
+    <section id="libro9" class="libro">
+      <div class="contenido-libro">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_659828-MPE82338303806_022025-O.webp" alt="El sexto">
+        <div class="info-libro">
+          <h2>El sexto</h2>
+          <p class="autor">José María Arguedas</p>
+          <p class="descripcion">
+            Inspirada en la propia experiencia carcelaria del autor, muestra las injusticias políticas y sociales del Perú de los años 30.
+          </p>
+          <p class="precio-detalle">S/ 27.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 10 -->
+    <section id="libro10" class="libro">
+      <div class="contenido-libro">
+        <img src="https://www.penguinlibros.com/pe/1717946/historia-de-mayta.jpg" alt="Historia de Mayta">
+        <div class="info-libro">
+          <h2>Historia de Mayta</h2>
+          <p class="autor">Mario Vargas Llosa</p>
+          <p class="descripcion">
+            Una reflexión sobre el fracaso de las utopías revolucionarias en el Perú, a través de la historia de un idealista de izquierda.
+          </p>
+          <p class="precio-detalle">S/ 37.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 11 -->
+    <section id="libro11" class="libro">
+      <div class="contenido-libro">
+        <img src="https://roxanaorue.com/wp-content/uploads/2016/03/conversaciones-en-la-catedral1.jpg" alt="Conversación en La Catedral">
+        <div class="info-libro">
+          <h2>Conversación en La Catedral</h2>
+          <p class="autor">Mario Vargas Llosa</p>
+          <p class="descripcion">
+            Considerada una de sus obras maestras, retrata la corrupción y el desencanto político en el Perú de Odría, a través de un diálogo introspectivo.
+          </p>
+          <p class="precio-detalle">S/ 45.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 12 -->
+    <section id="libro12" class="libro">
+      <div class="contenido-libro">
+        <img src="https://assets.lectulandia.com/b/ab/Manuel%20Scorza/La%20tumba%20del%20relampago%20(3)/small.jpg" alt="La tumba del relámpago">
+        <div class="info-libro">
+          <h2>La tumba del relámpago</h2>
+          <p class="autor">Manuel Scorza</p>
+          <p class="descripcion">
+            Parte del ciclo “La guerra silenciosa”, esta obra denuncia las injusticias y luchas sociales en los Andes peruanos.
+          </p>
+          <p class="precio-detalle">S/ 32.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 13 -->
+    <section id="libro13" class="libro">
+      <div class="contenido-libro">
+        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1667833970i/26048242.jpg" alt="La palabra del mudo">
+        <div class="info-libro">
+          <h2>La palabra del mudo</h2>
+          <p class="autor">Julio Ramón Ribeyro</p>
+          <p class="descripcion">
+            Una recopilación de cuentos donde el autor retrata con ironía y sensibilidad a los marginados y soñadores del Perú urbano.
+          </p>
+          <p class="precio-detalle">S/ 29.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 14 -->
+    <section id="libro14" class="libro">
+      <div class="contenido-libro">
+        <img src="https://bookscompany.pe/wp-content/uploads/2025/02/9786125044259-450x745.jpg" alt="Crónica de San Gabriel">
+        <div class="info-libro">
+          <h2>Crónica de San Gabriel</h2>
+          <p class="autor">Julio Ramón Ribeyro</p>
+          <p class="descripcion">
+            Una novela que combina humor, realismo y tragedia para mostrar la decadencia de una familia rural en los Andes.
+          </p>
+          <p class="precio-detalle">S/ 34.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 15 -->
+    <section id="libro15" class="libro">
+      <div class="contenido-libro">
+        <img src="https://pictures.abebooks.com/inventory/3837874163.jpg" alt="No una sino muchas muertes">
+        <div class="info-libro">
+          <h2>No una sino muchas muertes</h2>
+          <p class="autor">Julio Ortega</p>
+          <p class="descripcion">
+            Libro de cuentos que explora la violencia, la memoria y la esperanza en el contexto del Perú contemporáneo.
+          </p>
+          <p class="precio-detalle">S/ 25.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 16 -->
+    <section id="libro16" class="libro">
+      <div class="contenido-libro">
+        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1600276964i/65180.jpg" alt="Los geniecillos dominicales">
+        <div class="info-libro">
+          <h2>Los geniecillos dominicales</h2>
+          <p class="autor">Julio Ramón Ribeyro</p>
+          <p class="descripcion">
+            Novela autobiográfica que sigue la juventud y frustraciones de Ludo, un escritor en el Perú de los años 50.
+          </p>
+          <p class="precio-detalle">S/ 26.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 17 -->
+    <section id="libro17" class="libro">
+      <div class="contenido-libro">
+        <img src="https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1631316524i/90601.jpg" alt="Abril rojo">
+        <div class="info-libro">
+          <h2>Abril rojo</h2>
+          <p class="autor">Santiago Roncagliolo</p>
+          <p class="descripcion">
+            Thriller ambientado en Ayacucho durante la posguerra interna, que combina misterio policial con crítica social.
+          </p>
+          <p class="precio-detalle">S/ 39.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 18 -->
+    <section id="libro18" class="libro">
+      <div class="contenido-libro">
+        <img src="https://www.crisol.com.pe/media/catalog/product/cache/85cf14d8514889c3aec4590f746b60f9/9/7/9786124346538_x3pltrdhbwbwmzjq.jpg" alt="La hora azul">
+        <div class="info-libro">
+          <h2>La hora azul</h2>
+          <p class="autor">Alonso Cueto</p>
+          <p class="descripcion">
+            Narra la búsqueda de un abogado limeño por reconciliarse con el pasado violento de su familia durante el conflicto armado.
+          </p>
+          <p class="precio-detalle">S/ 36.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 19 -->
+    <section id="libro19" class="libro">
+      <div class="contenido-libro">
+        <img src="https://www.elejandria.com/covers/Paco_Yunque-Cesar_Vallejo-lg.png" alt="Paco Yunque">
+        <div class="info-libro">
+          <h2>Paco Yunque</h2>
+          <p class="autor">César Vallejo</p>
+          <p class="descripcion">
+            Cuento emblemático sobre la injusticia social y las desigualdades en la educación peruana. Narra la historia de un niño humilde que sufre abusos por parte del hijo del alcalde. Es una dura crítica al clasismo y la corrupción.
+          </p>
+          <p class="precio-detalle">S/ 18.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRO 20 -->
+    <section id="libro20" class="libro">
+      <div class="contenido-libro">
+        <img src="https://cms.anagrama-ed.es/uploads/media/portadas/0001/19/0ba934643314186e5affc4b9cdf6b13d26242e2b.jpeg" alt="Un mundo para Julius">
+        <div class="info-libro">
+          <h2>Un mundo para Julius</h2>
+          <p class="autor">Alfredo Bryce Echenique</p>
+          <p class="descripcion">
+            Una de las novelas más reconocidas de la literatura peruana contemporánea. Narra la historia de Julius, 
+            un niño de clase alta que observa con inocencia la desigualdad y el contraste entre su mundo privilegiado 
+            y el de los trabajadores de su casa. Es una obra sensible, crítica y de gran profundidad social.
+          </p>
+          <p class="precio-detalle">S/ 42.00</p>
+          <div class="botones-detalle">
+            <a href="/alquiler" class="btn">Alquilar</a>
+            <a href="/compra" class="btn">Comprar</a>
+            <a href="/catalogo" class="volver">Volver al catálogo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital Lectura Viva - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Búsqueda Avanzada | Biblioteca Digital Lectura Viva</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <h1>Biblioteca Digital Lectura Viva</h1>
+      <a href="/login" class="btn-login">Iniciar Sesión</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/catalogo">Catálogo</a></li>
+        <li><a href="/busqueda">Búsqueda Avanzada</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="busqueda-avanzada">
+    <!-- Sidebar de filtros a la izquierda -->
+    <aside class="filtros-sidebar">
+      <h2>Filtros de Búsqueda</h2>
+      <p class="descripcion-busqueda">Selecciona los filtros para encontrar libros.</p>
+
+      <!-- Filtro por Autor -->
+      <div class="filtro-grupo">
+        <h3>Autor</h3>
+        <div class="filtro-opciones">
+          <button class="filtro-boton" data-autor="Mario Vargas Llosa">Mario Vargas Llosa</button>
+          <button class="filtro-boton" data-autor="José María Arguedas">José María Arguedas</button>
+          <button class="filtro-boton" data-autor="César Vallejo">César Vallejo</button>
+          <button class="filtro-boton" data-autor="Julio Ramón Ribeyro">Julio Ramón Ribeyro</button>
+          <button class="filtro-boton" data-autor="Manuel Scorza">Manuel Scorza</button>
+          <button class="filtro-boton" data-autor="Alfredo Bryce Echenique">Alfredo Bryce Echenique</button>
+          <button class="filtro-boton" data-autor="Alonso Cueto">Alonso Cueto</button>
+          <button class="filtro-boton" data-autor="Santiago Roncagliolo">Santiago Roncagliolo</button>
+          <button class="filtro-boton" data-autor="Julio Ortega">Julio Ortega</button>
+        </div>
+      </div>
+
+      <!-- Filtro por Año -->
+      <div class="filtro-grupo">
+        <h3>Año de Publicación</h3>
+        <div class="filtro-opciones">
+          <button class="filtro-boton" data-anio="1919">1919 o antes</button>
+          <button class="filtro-boton" data-anio="1930">Años 1930</button>
+          <button class="filtro-boton" data-anio="1940">Años 1940</button>
+          <button class="filtro-boton" data-anio="1950">Años 1950</button>
+          <button class="filtro-boton" data-anio="1960">Años 1960</button>
+          <button class="filtro-boton" data-anio="1970">Años 1970</button>
+          <button class="filtro-boton" data-anio="1980">Años 1980</button>
+          <button class="filtro-boton" data-anio="1990">Años 1990</button>
+          <button class="filtro-boton" data-anio="2000">2000 o después</button>
+        </div>
+      </div>
+
+      <!-- Filtro por Precio -->
+      <div class="filtro-grupo">
+        <h3>Rango de Precio</h3>
+        <div class="filtro-opciones">
+          <button class="filtro-boton" data-precio="0-20">Menos de S/ 20</button>
+          <button class="filtro-boton" data-precio="20-30">S/ 20 - S/ 30</button>
+          <button class="filtro-boton" data-precio="30-40">S/ 30 - S/ 40</button>
+          <button class="filtro-boton" data-precio="40-50">S/ 40 - S/ 50</button>
+          <button class="filtro-boton" data-precio="50-100">Más de S/ 50</button>
+        </div>
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="acciones-filtros">
+        <button id="aplicar-filtros" class="boton-principal">Aplicar Filtros</button>
+        <button id="limpiar-filtros" class="boton-secundario">Limpiar Filtros</button>
+        <button id="ver-todos" class="boton-terciario">Ver Todos</button>
+      </div>
+    </aside>
+
+    <!-- Contenido principal con resultados -->
+    <section class="contenido-principal">
+      <div class="resultados-busqueda">
+        <h3>Resultados de la Búsqueda</h3>
+        <div class="filtros-activos" id="filtros-activos">
+          <!-- Aquí se mostrarán los filtros activos -->
+        </div>
+        <div class="grid-libros" id="resultados-libros">
+          <!-- Los resultados se cargarán aquí dinámicamente -->
+          <p class="mensaje-inicial">Selecciona uno o más filtros y haz clic en "Aplicar Filtros" para ver los resultados.</p>
+        </div>
+        <div class="contador-resultados" id="contador-resultados">
+          Mostrando 0 de 20 libros
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital Lectura Viva - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="static/busqueda.js"></script>
+</body>
+</html>

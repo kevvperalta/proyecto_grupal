@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <h1>Registro de Usuario</h1>
+      <a href="/login" class="btn-login">Iniciar Sesión</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/catalogo">Catálogo</a></li>
+        <li><a href="/busqueda">Búsqueda Avanzada</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <form id="form-registro">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" placeholder="Ejemplo: Kevin Peralta" required>
+
+      <label>Correo electrónico:</label>
+      <input type="email" name="correo" placeholder="Ejemplo: Kperaltal@gmail.com" required>
+
+      <label>Contraseña:</label>
+      <input type="password" name="password" placeholder="Mínimo de 8 caracteres" required>
+
+      <button type="submit">Registrarme</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital Lectura Viva</p>
+  </footer>
+  <script src="static/script.js"></script>
+</body>
+</html>

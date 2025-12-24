@@ -1,0 +1,885 @@
+/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #121212;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #8B0000;
+}
+
+.topbar h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.btn-login {
+  background-color: #8B0000;
+  color: #ffffff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.btn-login:hover {
+  background-color: #6a0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== NAVEGACIÓN ===== */
+nav {
+  background-color: #121212;
+  padding: 0.8rem 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 3rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #8B0000;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+main {
+  min-height: calc(100vh - 280px);
+  padding: 2.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== ESTILOS PARA SECCIÓN DE BIENVENIDA (index.html) ===== */
+#bienvenida {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+#bienvenida h2 {
+  font-size: 2.2rem;
+  color: #121212;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+#bienvenida p {
+  font-size: 1.2rem;
+  color: #777;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
+}
+
+#bienvenida img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* ===== ESTILOS PARA CATÁLOGO (catalogo.html) ===== */
+.catalogo {
+  padding: 1rem;
+}
+
+.catalogo h2 {
+  font-size: 2.2rem;
+  color: #121212;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.descripcion-catalogo {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/* ===== ESTILOS PARA TARJETAS DE LIBROS (común a catalogo, busqueda, index) ===== */
+.grid-libros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cambia de 5 a 4 columnas */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tarjeta-libro {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 380px;
+}
+
+.tarjeta-libro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de imagen con tamaño fijo */
+.contenedor-imagen {
+  width: 100%;
+  height: 220px; /* Altura fija para todas las imágenes */
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5; /* Fondo gris para imágenes que no carguen */
+}
+
+.tarjeta-libro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* La imagen cubre el contenedor manteniendo proporción */
+  object-position: center; /* Centra la imagen */
+  transition: transform 0.3s ease;
+  border-bottom: 3px solid #8B0000;
+}
+
+/* Contenido de la tarjeta */
+.contenido-tarjeta {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tarjeta-libro h3 {
+  font-size: 1.1rem;
+  color: #121212;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  height: 2.6em; /* Altura fija para 2 líneas */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: box;
+  line-clamp: 2;
+  box-orient: vertical;
+}
+
+.tarjeta-libro .autor {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  min-height: 1.2em;
+}
+
+.tarjeta-libro .precio {
+  color: #8B0000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  min-height: 1.5em;
+}
+
+.tarjeta-libro .botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto; /* Empuja los botones hacia abajo */
+}
+
+.tarjeta-libro button {
+  background-color: #121212;
+  color: #ffffff;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  flex: 1;
+  font-size: 0.9rem;
+  text-align: center;
+  min-height: 36px;
+}
+
+.tarjeta-libro button:hover {
+  background-color: #8B0000;
+  transform: translateY(-2px);
+}
+
+.tarjeta-libro .vermas {
+  background-color: transparent;
+  color: #8B0000;
+  border: 1px solid #8B0000;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1;
+  font-size: 0.9rem;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-libro .vermas:hover {
+  background-color: #8B0000;
+  color: #ffffff;
+}
+
+/* Para la página de inicio (index.html) */
+#bienvenida + .grid-libros,
+main:not(.catalogo):not(.busqueda-avanzada) .grid-libros {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas también */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ===== ESTILOS PARA DETALLE DE LIBRO (libro.html) ===== */
+.detalle-libro {
+  padding: 1rem;
+}
+
+.libro {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contenido-libro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.contenido-libro img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #1a1a1a;
+}
+
+.info-libro {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-libro h2 {
+  font-size: 2.2rem;
+  color: #121212;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.info-libro .autor {
+  color: #777;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.info-libro .descripcion {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.info-libro .precio-detalle {
+  font-size: 1.8rem;
+  color: #8B0000;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.botones-detalle {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.botones-detalle button {
+  background-color: #121212;
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 150px;
+}
+
+.botones-detalle button:hover {
+  background-color: #8B0000;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botones-detalle .volver {
+  background-color: transparent;
+  color: #121212;
+  border: 2px solid #121212;
+  padding: 0.9rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.botones-detalle .volver:hover {
+  background-color: #121212;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ESTILOS PARA FORMULARIOS ===== */
+.contacto, .formulario, .form-login, #form-registro {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto h2, .formulario h2 {
+  font-size: 2.2rem;
+  color: #121212;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.contacto p, .formulario p {
+  color: #777;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.info-contacto {
+  background-color: #f8f8f8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #8B0000;
+}
+
+.info-contacto p {
+  text-align: left;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.info-contacto strong {
+  color: #121212;
+}
+
+.contacto h3 {
+  font-size: 1.5rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form label {
+  font-weight: 600;
+  color: #121212;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+form input, form textarea, form select {
+  padding: 0.9rem 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: #8B0000;
+  box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.2);
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button[type="submit"] {
+  background-color: #8B0000;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+form button[type="submit"]:hover {
+  background-color: #6a0000;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.no-cuenta {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #777;
+}
+
+.no-cuenta a {
+  color: #8B0000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.no-cuenta a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ESTILOS PARA BÚSQUEDA AVANZADA ===== */
+.busqueda-avanzada {
+  padding: 1rem;
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.filtros-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.filtro-grupo {
+  background-color: #f8f8f8;
+  padding: 1.2rem;
+  border-radius: 8px;
+  border-left: 4px solid #8B0000;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-grupo h3 {
+  font-size: 1.2rem;
+  color: #121212;
+  margin-bottom: 1rem;
+}
+
+.filtro-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.filtro-boton {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  text-align: left;
+  width: 100%;
+}
+
+.filtro-boton:hover {
+  background-color: #f0f0f0;
+  border-color: #8B0000;
+  color: #8B0000;
+}
+
+.filtro-boton.activo {
+  background-color: #8B0000;
+  color: #ffffff;
+  border-color: #8B0000;
+}
+
+.acciones-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 1rem;
+}
+
+.boton-principal, .boton-secundario, .boton-terciario {
+  padding: 0.9rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+}
+
+.boton-principal {
+  background-color: #8B0000;
+  color: #ffffff;
+}
+
+.boton-principal:hover {
+  background-color: #6a0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.boton-secundario {
+  background-color: #ffffff;
+  color: #121212;
+  border: 2px solid #121212;
+}
+
+.boton-secundario:hover {
+  background-color: #121212;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.boton-terciario {
+  background-color: #ffffff;
+  color: #8B0000;
+  border: 2px solid #8B0000;
+}
+
+.boton-terciario:hover {
+  background-color: #8B0000;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenido-principal {
+  flex: 1;
+}
+
+.resultados-busqueda {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+}
+
+.resultados-busqueda h3 {
+  font-size: 1.8rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.filtros-activos {
+  background-color: #f8f8f8;
+  padding: 1.2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  min-height: 60px;
+}
+
+.filtro-activo {
+  background-color: #8B0000;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filtro-activo button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  line-height: 1;
+}
+
+.mensaje-inicial {
+  text-align: center;
+  color: #777;
+  font-size: 1.1rem;
+  padding: 3rem 1rem;
+  font-style: italic;
+}
+
+.contador-resultados {
+  text-align: right;
+  color: #777;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #121212;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.8rem;
+  margin-top: 3rem;
+  border-top: 3px solid #8B0000;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .grid-libros,
+  #bienvenida + .grid-libros,
+  main:not(.catalogo):not(.busqueda-avanzada) .grid-libros {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas medianas */
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-libros,
+  #bienvenida + .grid-libros,
+  main:not(.catalogo):not(.busqueda-avanzada) .grid-libros {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
+  }
+  
+  .busqueda-avanzada {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .filtros-sidebar {
+    width: 100%;
+    position: static;
+  }
+  
+  .filtro-opciones {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .filtro-boton {
+    width: auto;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .topbar h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .grid-libros,
+  #bienvenida + .grid-libros,
+  main:not(.catalogo):not(.busqueda-avanzada) .grid-libros {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles grandes */
+  }
+  
+  .tarjeta-libro {
+    min-height: 350px;
+  }
+  
+  .contenedor-imagen {
+    height: 180px;
+  }
+  
+  .contenido-libro {
+    flex-direction: column;
+  }
+  
+  .contenido-libro img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .botones-detalle, .tarjeta-libro .botones {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .botones-detalle button, 
+  .botones-detalle .volver,
+  .tarjeta-libro button,
+  .tarjeta-libro .vermas {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .contacto, .formulario, .form-login, #form-registro {
+    padding: 1.5rem;
+  }
+  
+  .busqueda-avanzada {
+    padding: 0.5rem;
+  }
+  
+  .filtros-sidebar {
+    padding: 1rem;
+  }
+  
+  .filtro-grupo {
+    padding: 1rem;
+  }
+  
+  .filtro-opciones {
+    flex-direction: column;
+  }
+  
+  .filtro-boton {
+    width: 100%;
+  }
+  
+  .resultados-busqueda {
+    padding: 1.5rem;
+  }
+  
+  .filtros-activos {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-libros,
+  #bienvenida + .grid-libros,
+  main:not(.catalogo):not(.busqueda-avanzada) .grid-libros {
+    grid-template-columns: 1fr; /* 1 columna en móviles pequeños */
+  }
+  
+  .tarjeta-libro {
+    min-height: 320px;
+  }
+  
+  .contenedor-imagen {
+    height: 160px;
+  }
+}

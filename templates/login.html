@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <h1>Iniciar Sesión</h1>
+      <a href="/login" class="btn-login">Iniciar Sesión</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/catalogo">Catálogo</a></li>
+        <li><a href="/busqueda">Búsqueda Avanzada</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <form id="form-login" class="form-login">
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" placeholder="ejemplo@gmail.com" required>
+
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
+      <button type="submit">Entrar</button>
+
+      <p class="no-cuenta">
+        ¿No tienes cuenta? <a href="registro.html">Crea una aquí</a>
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Digital Lectura Viva - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
