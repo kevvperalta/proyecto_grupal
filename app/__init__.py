@@ -75,11 +75,11 @@ def test_db():
             result = cursor.fetchone()
             cursor.close()
             conn.close()
-            return f"✅ Base de datos funcionando. Libros en BD: {result['total']}"
+            return f" Base de datos funcionando. Libros en BD: {result['total']}"
         else:
-            return "❌ No se pudo conectar a la base de datos"
+            return " No se pudo conectar a la base de datos"
     except Exception as e:
-        return f"❌ Error en base de datos: {str(e)}"
+        return f" Error en base de datos: {str(e)}"
 
 # Ruta para ver variables de entorno (solo muestra, no contraseñas)
 @app.route('/test-env')

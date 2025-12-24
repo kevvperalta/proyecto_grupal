@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from ..utils.db import get_db_connection  # ✅ Conexión directa
+from ..utils.db import get_db_connection  # 
 from datetime import datetime
 
 contacto_bp = Blueprint('contacto', __name__)

@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from ..utils.db import get_db_connection  # ✅ Importa la función de conexión
+from ..utils.db import get_db_connection  
 
 libros_bp = Blueprint('libros', __name__)
 
@@ -22,7 +22,7 @@ def get_all_libros():
     for libro in libros:
         libro['precio'] = float(libro['precio'])
     
-    return jsonify(libros), 200  # ✅ Devuelve la lista directamente
+    return jsonify(libros), 200  # Devuelve la lista directamente
 
 
 @libros_bp.route('/<int:id>', methods=['GET'])

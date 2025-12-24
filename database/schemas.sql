@@ -73,8 +73,6 @@ CREATE INDEX idx_alquileres_usuario ON Alquileres(id_usuario);
 -- ============================================
 -- 4. INSERTAR LOS 20 LIBROS (DATOS REALES)
 -- ============================================
--- Nota: Las descripciones se tomaron de libro.html
---       Las URLs de imagen de busqueda.js/catalogo.html
 
 INSERT INTO Libros (titulo, autor, descripcion, anio_publicacion, precio, imagen_url, stock_compra, stock_alquiler) VALUES
 ('La ciudad y los perros', 'Mario Vargas Llosa', 'Ambientada en el Colegio Militar Leoncio Prado, esta novela muestra la violencia, la hipocresía y la lucha por la identidad en un entorno represivo. Ganó el Premio Biblioteca Breve en 1962.', 1963, 35.00, 'https://www.rae.es/sites/default/files/la_ciudad_y_los_perros.jpg', 8, 3),
